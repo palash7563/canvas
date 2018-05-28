@@ -10,7 +10,7 @@ let mouse = {
   y: undefined
 };
 
-const minRadius = Math.random() + 2;
+const minRadius = Math.random() + 1;
 const maxRadius = Math.random() + 30;
 
 window.addEventListener("mousemove", function(event) {
@@ -35,8 +35,8 @@ function Circle(x, y, dx, dy, radius, color) {
   this.draw = function() {
     contest.beginPath();
     contest.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-    contest.strokeStyle = this.color;
-    contest.stroke();
+    // contest.strokeStyle = this.color;
+    // contest.stroke();
     contest.fillStyle = this.color;
     contest.fill();
   };
@@ -70,30 +70,33 @@ function Circle(x, y, dx, dy, radius, color) {
 }
 
 const circleArray = [];
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 1000; i++) {
   let x = Math.random() * innerWidth;
   let y = Math.random() * innerHeight;
   let dx = (Math.random() - 0.5) * 10;
   let dy = (Math.random() - 0.5) * 10;
-  let radius = Math.floor(Math.random() * 15) + 1;
+  let radius = 1;
+  // let radius = Math.floor(Math.random() * 15) + 1;
 
   circleArray.push(new Circle(x, y, dx, dy, radius, "blue"));
 }
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 1000; i++) {
   let x = Math.random() * innerWidth;
   let y = Math.random() * innerHeight;
   let dx = (Math.random() - 0.5) * 10;
   let dy = (Math.random() - 0.5) * 10;
-  let radius = Math.floor(Math.random() * 15) + 1;
+  let radius = 1;
+  // let radius = Math.floor(Math.random() * 15) + 1;
 
   circleArray.push(new Circle(x, y, dx, dy, radius, "red"));
 }
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 1000; i++) {
   let x = Math.random() * innerWidth;
   let y = Math.random() * innerHeight;
   let dx = (Math.random() - 0.5) * 10;
   let dy = (Math.random() - 0.5) * 10;
-  let radius = Math.floor(Math.random() * 15) + 1;
+  let radius = 1;
+  // let radius = Math.floor(Math.random() * 15) + 1;
 
   circleArray.push(new Circle(x, y, dx, dy, radius, "black"));
 }
